@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- By Alexey Zapromyotov, 1811688
+     Desription: Billing information Page for the Project
+	   Date: June-July-2018              
+	<link rel="stylesheet" type="text/css" href="../CSS/loginstyle.css">
+-->
+<title>Welcome Page</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../CSS/loginstyle.css">
+<style type="text/css" id="mainStyle">
+	h4 {
+		text-align: center;
+		color: navy;
+	}
+	 .centerDiv {
+	 	color: grey;
+    	display: table;
+    	width: 90%;
+    	margin: 10px auto;
+    	margin-right: auto; margin-left: auto;
+    	border: 1px solid red ;
+    }
+    .paymentBtnDiv {
+    	display: table;
+    	width: 90%;
+    	margin: 10px auto;
+    	margin-right: auto; margin-left: auto;    	
+    	text-align: center;
+    }
+    #headerDiv {
+    	width: 100%;
+    	float: none;
+    }
+    #footerDiv {
+    	width: 90%;
+    	float: none;
+    	padding: 5px 20px;
+    }
+    .footerImg {
+    		text-align: center;
+    		width: 200px;
+			padding: 10px;			
+    }
+    #billingCard {
+    	padding: 10px;
+    	display: table;
+    	width: 70%;
+    	margin: 10px auto;
+    	margin-right: auto; margin-left: auto;
+    	
+    }
+    #subtotals {
+    	padding: 10px;
+    	display: table;
+    	width: 70%;
+    	margin: 10px auto;
+    	margin-right: auto; margin-left: auto;
+    }
+    #subtotals td {
+    	padding: 10px;
+    	margin: 10px;
+    	text-align: left;
+    }
+    #leftBillTo {
+    	width: 58%;
+    	float: left;    	
+    }
+    #rightBillTo {
+    	width: 40%;
+    	float: left;    	
+    }
+    #tablePopup {
+    	padding: 10px;
+    	display: table;
+    	width: 60%;
+    	margin: 5px auto;
+    	margin-right: auto; margin-left: auto;
+
+    }
+    #tablePopup td {
+    	width: 100%;
+    	padding: 5px;
+    	margin: 10px;
+    }
+
+</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./jquery-3.1.1.min.js"></script>
+
+</head>
+<body class="bkgrndPage" onload="USR_showBillingTotals ();">
+<div id="AboveheaderDiv"></div>
+<div id="headerDiv">	
+</div>
+
+<div class="centerDiv" align="center">
+	<div id="leftBillTo">
+	<table id="billingCard">
+		<tr>
+			<td>
+				<label class="container">
+				  <input type="radio" checked="checked" name="radio"> Bill To:
+				  <span class="checkmark"></span>
+				</label>
+				<br /> <br /> *Credit/Debit Card <br /> 
+				<select name="cards" id="cards">
+				    <option value="VISA">VISA</option>
+				    <option value="MasterCard">MasterCard</option>
+				    <option value="AmericanExpress">AmericanExpress</option>
+				    <option value="cash">Cash</option>
+			  	</select>&nbsp;&nbsp;&nbsp;
+				    	<img src="../Img/Visa-PC.png" alt="VISA" />&nbsp;&nbsp;&nbsp;
+				    	<img src="../Img/MasterCard-PC.png" alt="MasterCard"/>&nbsp;&nbsp;&nbsp;
+				    	<img src="../Img/AmericanExpress-PC.png" alt="AmericanExpress" />
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td> <br /> *Card Number: <br />
+				<input type="number" id="credCard" name="credCard" placeholder="5191"/>
+				 <br /> Ex: 5555555555554444
+			</td>
+		</tr>
+		<tr>
+			<td><br /> *Expiration Date:<br />
+				<select name="expireMonth" id="expireMonth">
+				    <option value="1">01</option>
+				    <option value="2">02</option>
+				    <option value="3">03</option>
+				    <option value="4">04</option>
+				    <option value="5">05</option>
+				    <option value="6">06</option>
+				    <option value="7">07</option>
+				    <option value="8">08</option>
+				    <option value="9">09</option>
+				    <option value="10">10</option>
+				    <option value="11">11</option>
+				    <option value="12">12</option>
+			  	</select>&nbsp;&nbsp;&nbsp;
+			  	<select name="expireYear" id="expireYear">
+				    <option value="2018">2018</option>
+				    <option value="2019">2019</option>
+				    <option value="2020">2020</option>
+				    <option value="2021">2021</option>
+			  	</select>
+			</td>
+		</tr>
+		<tr>
+			<td> <br /> *Security Number: <br />
+				<input type="number" id="cardSecNum" name="cardSecNum" placeholder="3-digits"/>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<div id="rightBillTo">
+		<table id="subtotals">
+			<tr>
+				<td>Current User:</td>
+				<td id="loggedUserID">&nbsp;&nbsp;&nbsp;</td>
+			</tr>
+			<tr>
+				<td >&nbsp;&nbsp;&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Subtotal:</td>
+				<td id="orderSubtotal"></td>
+			</tr>
+			<tr>
+				<td>Shipping:</td>
+				<td id="orderShipping"></td>
+			</tr>
+			<tr>
+				<td>Taxes:</td>
+				<td id="orderTaxes"></td>
+			</tr>
+			<tr>
+				<td style=" border-top: 1px solid lightgray; border-bottom: 1px solid lightgray;">ORDER TOTAL:</td>
+				<td id="orderTotal" style=" border-top: 1px solid lightgray; border-bottom: 1px solid lightgray;"></td>
+			</tr>			
+		</table>
+	</div>	
+</div>
+<br /><br />&nbsp;&nbsp;&nbsp;
+<div id="billingAddressDiv">
+	
+</div>
+
+<div class="paymentBtnDiv">
+	<!-- //
+	// <input type="button" name="Pay" value="Payment" onClick="location.href='../Pages/PageBilling.htm';" style="float: none;">
+	// <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Validate</button>
+	// --->
+	<input type="button" name="Pay" value="Payment" onClick="validateBilling();" style="float: none;">
+	
+</div>
+<br /><br /><br /><br /><br /><br />
+<div id="footerDiv">
+	<h4> webmaster: Alexey Zapromyotov </h4>
+</div>
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+    	<h1 style="text-align: center; color: red; font-weight: bold;">Payment Verification:</h1>
+    	<table id="tablePopup">
+
+    		<tr>
+    			<td>Card Type: </td><td id="cardType_popup"></td>
+    		</tr>
+    		<tr>
+    			<td>Card Number: </td><td id="cardNum_popup"></td>
+    		</tr>
+    	    <tr>
+    			<td>Exp date: </td><td id="cardExpDate_popup"></td>
+    		</tr>
+    		<tr>
+    			<td>Security Number: </td><td id="cardSecNum_popup"></td>
+    		</tr>
+    	    <tr>
+    			<td>Order Total: </td><td id="orderTotal_popup"></td>
+    		</tr>
+    	</table>        
+      <button type="button" onclick="closeModalAndExit();">DONE!</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+<script type="text/javascript" src="../JS/topmenu.js"></script>
+</html>

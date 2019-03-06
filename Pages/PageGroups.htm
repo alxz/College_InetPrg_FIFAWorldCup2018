@@ -1,0 +1,836 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- By Alexey Zapromyotov, 1811688
+     Desription: All Groups Page for the Project
+	   Date: June-July-2018              -->
+<title>Groups Score Page</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css" id="mainStyle">
+	h1 {
+		text-align: center; 
+		color: blue;
+	}
+	h2 {
+		text-align: center;
+		vertical-align: bottom;
+		color: #FFFFF0;
+	}
+	h4 {
+		text-align: center;
+		color: navy;
+	}
+	td {
+		border: 0px solid #778899;
+		margin: 0px;
+		padding: 5px;
+		text-align: center;
+		vertical-align: center;
+	}
+	td.Groups {
+		border: 5px solid #778899;
+	}
+	.bkgrndPage {
+		text-align: left;
+
+	}
+	.detailsGroups {
+		width: 100%;
+		text-align: center;
+		margin: 5px;
+		padding: 0px;
+		border: 5px solid #B0C4DE;
+	}
+
+	 #logoImg {
+        width: 70px;
+       }
+    #footerDiv {
+    	width: 90%;
+    	float: none;
+    	padding: 5px 20px;
+    }
+    #groupsMenu {
+    	width: 100%;
+    	text-align: center;
+     	padding: 5px;
+    	margin: 5px;
+    }
+    #menuGrpDiv {
+     	text-align: center;
+    	color: grey;
+    	font-style: bold;
+    	padding: 5px 15px;
+    	margin: 5px;
+    	background-color: #B0C4DE;
+    }
+    .rowHeads {
+    	background-color: #778899;
+    	color: #FFFACD;
+    	text-align: left;
+    	margin: 0px;
+    	padding: 15px;
+    	width: 100%;
+    	border: 0px solid #778899;
+    }
+    img.flags {
+    	width: 40px;
+    	margin: 5px;
+    	padding: 0px;
+    	border: 1px solid #D3D3D3;
+    }
+    .flagsCol {
+    	text-align: left;
+    	vertical-align: center;
+    	font-weight: bold;
+    	width: 25%;
+    }
+    .ListView table {
+    	width: 100%;
+    	padding: 15px;
+    	margin: 10px;
+    	vertical-align: center;
+    	text-align: left;
+    }
+    .ListView td{
+    	
+    	float: none;
+    	font-weight: bold;
+    	vertical-align: center;    	
+    	border-top: 1px	solid grey;
+    	border-bottom: 1px	solid grey;
+    	padding: 10px 20px;
+    	margin: 5px;
+    }
+    .head3table {
+    	background-color: #778899;
+    	color:#FFFFE0;
+    	border: 1px solid grey;
+    }
+    #GroupPhase  {
+    	width: 80%;
+    	display: none;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    #QuaterPhase  {
+    	width: 80%;
+    	display: none;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    #KnochoutPhase  {
+    	width: 80%;
+    	display: none;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    #SemiFinalPhase  {
+    	width: 80%;
+    	display: none;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    #FinalPhase  {
+    	width: 80%;
+    	display: table; 
+        margin: 0 auto;
+        padding: 10px;
+    }
+</style>
+</head>
+<body class="bkgrndPage">
+<div id="AboveheaderDiv"></div>
+<div id="headerDiv">		
+</div>
+<div style="padding: 10px 10px 10px 1px;">
+		<button onclick="tablesShowHide('GroupPhase')">Group Phase</button>&nbsp;
+		<button onclick="tablesShowHide('KnochoutPhase')">Knockout Phase</button>&nbsp;
+		<button onclick="tablesShowHide('QuaterPhase')">Quater-finals</button>&nbsp;
+		<button onclick="tablesShowHide('SemiFinalPhase')">Semi-Final 3rd Plase</button>&nbsp;
+		<button onclick="tablesShowHide('FinalPhase')">Final Game</button>&nbsp;
+</div>
+<div id="GroupPhase">
+	<h1>Group stage - Current Scores</h1>
+	<div>
+		<p>Competing countries are divided into eight groups of four teams (groups A to H). Teams in each group play one another in a round-robin basis. A win is awarded 3 points and a tie/draw is awarded 1 point to each team. After matches are completed, the top two teams of each group advance to the first knockout stage (round of 16).</p>
+	</div>
+	<div id="menuGrpDiv">
+		<table id="groupsMenu">
+			<tr>
+				<td><a href="#groupScores_A">Group A</a></td>
+				<td><a href="#groupScores_B">Group B</a></td>
+				<td><a href="#groupScores_C">Group C</a></td>
+				<td><a href="#groupScores_D">Group D</a></td>
+				<td><a href="#groupScores_E">Group E</a></td>
+				<td><a href="#groupScores_F">Group F</a></td>
+				<td><a href="#groupScores_G">Group G</a></td>
+				<td><a href="#groupScores_H">Group H</a></td>
+			</tr>
+		</table>
+	</div>
+	<table class="detailsGroups">
+		<tr>
+			<td colspan="9" class="rowHeads" id="groupScores_A">Group A</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Played</td>
+			<td>Won</td>
+			<td>Draw</td>
+			<td>lost</td>	
+			<td>Goals For</td>
+			<td>Goals Against</td>
+			<td>Goals Diff</td>
+			<td>Points</td>						
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_uruguay.svg" alt="Uruguay" class="flags" />&nbsp;Uruguay</td>
+			<td>3</td>
+			<td>3</td>
+			<td>0</td>
+			<td>0</td>
+			<td>5</td>
+			<td>0</td>
+			<td>5</td>
+			<td>9</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_russia.svg" alt="Russia" class="flags" />&nbsp;Russia</td>
+			<td>3</td>
+			<td>2</td>
+			<td>0</td>
+			<td>1</td>
+			<td>8</td>
+			<td>4</td>
+			<td>4</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_saudi_arabia.svg" alt="SArabia" class="flags" />&nbsp;Saudi Arabia</td>
+			<td>3</td>
+			<td>1</td>
+			<td>0</td>
+			<td>2</td>
+			<td>2</td>
+			<td>7</td>
+			<td>-5</td>
+			<td>3</td>
+		</tr>	
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_egypt.svg" alt="Egypt" class="flags" />&nbsp;Egypt</td>
+			<td>3</td>
+			<td>0</td>
+			<td>0</td>
+			<td>3</td>
+			<td>2</td>
+			<td>6</td>
+			<td>-4</td>
+			<td>0</td>
+		</tr>	
+
+		<tr>
+			<td colspan="9" class="rowHeads" id="groupScores_B">Group B</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Played</td>
+			<td>Won</td>
+			<td>Draw</td>
+			<td>lost</td>	
+			<td>Goals For</td>
+			<td>Goals Against</td>
+			<td>Goals Diff</td>
+			<td>Points</td>						
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_spain.svg" alt="Spain" class="flags" />&nbsp;Spain</td>
+			<td>3</td>
+			<td>1</td>
+			<td>2</td>
+			<td>0</td>
+			<td>6</td>
+			<td>5</td>
+			<td>1</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_portugal.svg" alt="Portugal" class="flags" />&nbsp;Portugal</td>
+			<td>3</td>
+			<td>1</td>
+			<td>2</td>
+			<td>0</td>
+			<td>5</td>
+			<td>4</td>
+			<td>1</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_iran.svg" alt="Iran" class="flags" />&nbsp;Iran</td>
+			<td>3</td>
+			<td>1</td>
+			<td>1</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>0</td>
+			<td>4</td>
+		</tr>	
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_morocco.svg" alt="Morocco" class="flags" />&nbsp;Morocco</td>
+			<td>3</td>
+			<td>0</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>4</td>
+			<td>-2</td>
+			<td>1</td>
+		</tr>	
+
+
+		<tr>
+			<td colspan="9" class="rowHeads" id="groupScores_C">Group C</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Played</td>
+			<td>Won</td>
+			<td>Draw</td>
+			<td>lost</td>	
+			<td>Goals For</td>
+			<td>Goals Against</td>
+			<td>Goals Diff</td>
+			<td>Points</td>						
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_france.svg" alt="France" class="flags" />&nbsp;France</td>
+			<td>3</td>
+			<td>2</td>
+			<td>1</td>
+			<td>0</td>
+			<td>3</td>
+			<td>1</td>
+			<td>2</td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_denmark.svg" alt="Denmark" class="flags" />&nbsp;Denmark</td>
+			<td>3</td>
+			<td>1</td>
+			<td>2</td>
+			<td>0</td>
+			<td>2</td>
+			<td>1</td>
+			<td>1</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_peru.svg" alt="Peru" class="flags" />&nbsp;Peru</td>
+			<td>3</td>
+			<td>1</td>
+			<td>0</td>
+			<td>2</td>
+			<td>2</td>
+			<td>2</td>
+			<td>0</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_australia.svg" alt="Australia" class="flags" />&nbsp;Australia</td>
+			<td>3</td>
+			<td>0</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>5</td>
+			<td>-3</td>
+			<td>1</td>
+		</tr>	
+		<tr>
+			<td colspan="9" class="rowHeads" id="groupScores_D">Group D</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Played</td>
+			<td>Won</td>
+			<td>Draw</td>
+			<td>lost</td>	
+			<td>Goals For</td>
+			<td>Goals Against</td>
+			<td>Goals Diff</td>
+			<td>Points</td>						
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_croatia.svg" alt="Croatia" class="flags" />&nbsp;Croatia</td>
+			<td>3</td>
+			<td>3</td>
+			<td>0</td>
+			<td>0</td>
+			<td>7</td>
+			<td>1</td>
+			<td>6</td>
+			<td>9</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_argentina.svg" alt="Argentina" class="flags" />&nbsp;Argentina</td>
+			<td>3</td>
+			<td>1</td>
+			<td>1</td>
+			<td>1</td>
+			<td>3</td>
+			<td>5</td>
+			<td>-2</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_nigeria.svg" alt="Nigeria" class="flags" />&nbsp;Nigeria</td>
+			<td>3</td>
+			<td>1</td>
+			<td>0</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>-1</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_iceland.svg" alt="Icenland" class="flags" />&nbsp;Iceland</td>
+			<td>3</td>
+			<td>0</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>5</td>
+			<td>-3</td>
+			<td>1</td>
+		</tr>	
+
+		<tr>
+			<td colspan="9" class="rowHeads" id="groupScores_E">Group E</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Played</td>
+			<td>Won</td>
+			<td>Draw</td>
+			<td>lost</td>	
+			<td>Goals For</td>
+			<td>Goals Against</td>
+			<td>Goals Diff</td>
+			<td>Points</td>						
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_brazil.svg" alt="Brazil" class="flags" />&nbsp;Brazil</td>
+			<td>3</td>
+			<td>2</td>
+			<td>1</td>
+			<td>0</td>
+			<td>5</td>
+			<td>1</td>
+			<td>4</td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_switzerland.svg" alt="Switzerland" class="flags" />&nbsp;Switzerland</td>
+			<td>3</td>
+			<td>1</td>
+			<td>2</td>
+			<td>0</td>
+			<td>5</td>
+			<td>4</td>
+			<td>1</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_serbia.svg" alt="Serbia" class="flags" />&nbsp;Serbia</td>
+			<td>3</td>
+			<td>1</td>
+			<td>0</td>
+			<td>2</td>
+			<td>2</td>
+			<td>4</td>
+			<td>-2</td>
+			<td>3</td>
+		</tr>	
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_costa_rica.svg" alt="CRica" class="flags" />&nbsp;Costa Rica</td>
+			<td>3</td>
+			<td>0</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>5</td>
+			<td>-3</td>
+			<td>1</td>
+		</tr>	
+
+		<tr>
+			<td colspan="9" class="rowHeads" id="groupScores_F">Group F</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Played</td>
+			<td>Won</td>
+			<td>Draw</td>
+			<td>lost</td>	
+			<td>Goals For</td>
+			<td>Goals Against</td>
+			<td>Goals Diff</td>
+			<td>Points</td>						
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_sweden.svg" alt="Sweden" class="flags" />&nbsp;Sweden</td>
+			<td>3</td>
+			<td>2</td>
+			<td>0</td>
+			<td>1</td>
+			<td>5</td>
+			<td>2</td>
+			<td>3</td>
+			<td>6</td>
+		</tr>	
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_mexico.svg" alt="Mexico" class="flags" />&nbsp;Mexico</td>
+			<td>3</td>
+			<td>2</td>
+			<td>0</td>
+			<td>1</td>
+			<td>3</td>
+			<td>4</td>
+			<td>-1</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_south_korea.svg" alt="SKorea" class="flags" />&nbsp;Korean Republic</td>
+			<td>3</td>
+			<td>1</td>
+			<td>0</td>
+			<td>2</td>
+			<td>3</td>
+			<td>3</td>
+			<td>0</td>
+			<td>3</td>
+		</tr>	
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_germany.svg" alt="Germany" class="flags" />&nbsp;Germany</td>
+			<td>3</td>
+			<td>1</td>
+			<td>0</td>
+			<td>2</td>
+			<td>2</td>
+			<td>4</td>
+			<td>-2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td colspan="9" class="rowHeads" id="groupScores_G">Group G</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Played</td>
+			<td>Won</td>
+			<td>Draw</td>
+			<td>lost</td>	
+			<td>Goals For</td>
+			<td>Goals Against</td>
+			<td>Goals Diff</td>
+			<td>Points</td>						
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_england.svg" alt="England" class="flags" />&nbsp;England</td>
+			<td>2</td>
+			<td>2</td>
+			<td>0</td>
+			<td>0</td>
+			<td>8</td>
+			<td>2</td>
+			<td>6</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_belgium.svg" alt="Belgium" class="flags" />&nbsp;Belgium</td>
+			<td>2</td>
+			<td>2</td>
+			<td>0</td>
+			<td>0</td>
+			<td>8</td>
+			<td>2</td>
+			<td>6</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_tunisia.svg" alt="Tunisia" class="flags" />&nbsp;Tunisia</td>
+			<td>2</td>
+			<td>0</td>
+			<td>0</td>
+			<td>2</td>
+			<td>3</td>
+			<td>7</td>
+			<td>-4</td>
+			<td>0</td>
+		</tr>	
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_panama.svg" alt="Panama" class="flags" />&nbsp;Panama</td>
+			<td>2</td>
+			<td>0</td>
+			<td>0</td>
+			<td>2</td>
+			<td>1</td>
+			<td>9</td>
+			<td>-8</td>
+			<td>0</td>
+		</tr>
+
+		<tr>
+			<td colspan="9" class="rowHeads" id="groupScores_H">Group H</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Played</td>
+			<td>Won</td>
+			<td>Draw</td>
+			<td>lost</td>	
+			<td>Goals For</td>
+			<td>Goals Against</td>
+			<td>Goals Diff</td>
+			<td>Points</td>						
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_japan.svg" alt="Japan" class="flags" />&nbsp;Japan</td>
+			<td>2</td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+			<td>4</td>
+			<td>3</td>
+			<td>1</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_senegal.svg" alt="Senegal" class="flags" />&nbsp;Senegal</td>
+			<td>2</td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+			<td>4</td>
+			<td>3</td>
+			<td>1</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_colombia.svg" alt="Colombia" class="flags" />&nbsp;Colombia</td>
+			<td>2</td>
+			<td>1</td>
+			<td>0</td>
+			<td>1</td>
+			<td>4</td>
+			<td>2</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>	
+		<tr>
+			<td class="flagsCol"><img src="../Img/flags/mobile_flag_poland.svg" alt="Poland" class="flags" />&nbsp;Poland</td>
+			<td>2</td>
+			<td>0</td>
+			<td>0</td>
+			<td>2</td>
+			<td>1</td>
+			<td>5</td>
+			<td>-4</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td colspan="9" class="rowHeads"><h4><a href="#headerDiv">Get back to top</a></h4>		
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="KnochoutPhase">
+	<p><h1>Round of 16</h1></p>
+	<table class="ListView">
+		<tr>
+			<td colspan="4"><h3 class="head3table">Round of 16</h3></td>
+		</tr>
+			<tr>
+				<td class="head3table">When / Where</td>
+				<td class="head3table">Team1</td>
+				<td class="head3table">SCORE</td>
+				<td class="head3table">Team2</td>
+			</tr>
+			<tr>
+				<td>30 JUN 2018 <br /> Kazan Arena</td>
+				<td>France&nbsp;<img src="../Img/flags/mobile_flag_france.svg" alt="France" class="flags" /></td>
+				<td><h1>4 : 3</h1></td>
+				<td><img src="../Img/flags/mobile_flag_argentina.svg" alt="Argentina" class="flags" />&nbsp;Argentina</td>
+			</tr>
+			<tr>
+				<td>30 JUN 2018 <br /> Fisht Stadium</td>
+				<td>Uruguay &nbsp;<img src="../Img/flags/mobile_flag_uruguay.svg" alt="Uruguay" class="flags" /></td>
+				<td><h1>2 : 1</h1></td>
+				<td><img src="../Img/flags/mobile_flag_portugal.svg" alt="Portugal" class="flags" />&nbsp;Portugal</td>
+			</tr>
+			<tr>
+				<td>01 JUL 2018 <br /> Luzhniki Stadium</td>
+				<td>Spain &nbsp;<img src="../Img/flags/mobile_flag_spain.svg" alt="Spain" class="flags" /></td>
+				<td><h1>1 : 1</h1>Russia win on penalities (3-2)</td>
+				<td><img src="../Img/flags/mobile_flag_russia.svg" alt="Russia" class="flags" />&nbsp; Russia</td>
+			</tr>
+			<tr>
+				<td>01 JUL 2018 <br /> Nizhny Novgorod</td>
+				<td>Croatia &nbsp;<img src="../Img/flags/mobile_flag_croatia.svg" alt="Croatia" class="flags" /></td>
+				<td><h1>1 : 1</h1>Croatia win on penalities (3-2)</td>
+				<td><img src="../Img/flags/mobile_flag_denmark.svg" alt="Denmark" class="flags" />&nbsp; Denmark</td>
+			</tr>
+			<tr>
+				<td>02 JUL 2018 <br /> Samara Arena</td>
+				<td>Brazil &nbsp;<img src="../Img/flags/mobile_flag_brazil.svg" alt="Brazil" class="flags" /></td>
+				<td><h1>2 : 0</h1></td>
+				<td><img src="../Img/flags/mobile_flag_mexico.svg" alt="Mexico" class="flags" />&nbsp;Mexico</td>
+			</tr>
+			<tr>
+				<td>02 JUL 2018 <br /> Rostov Arena</td>
+				<td>Belgium &nbsp;<img src="../Img/flags/mobile_flag_belgium.svg" alt="Belgium" class="flags" /></td>
+				<td><h1>3 : 2</h1></td>
+				<td><img src="../Img/flags/mobile_flag_japan.svg" alt="Japan" class="flags" />&nbsp; Japan</td>
+			</tr>	
+			<tr>
+				<td>03 JUL 2018 <br /> St.Peterburg</td>
+				<td>Sweden &nbsp;<img src="../Img/flags/mobile_flag_sweden.svg" alt="Sweden" class="flags" /></td>
+				<td><h1>1 : 0</h1></td>
+				<td><img src="../Img/flags/mobile_flag_switzerland.svg" alt="Switzerland" class="flags" />&nbsp;Switzerland</td>
+			</tr>
+			<tr>
+				<td>03 JUL 2018 <br /> Spartak Stadium</td>
+				<td>Colombia &nbsp;<img src="../Img/flags/mobile_flag_colombia.svg" alt="Colombia" class="flags" /></td>
+				<td><h1>1 : 1</h1>England win on penalties (3 - 4)</td>
+				<td><img src="../Img/flags/mobile_flag_england.svg" alt="England" class="flags" />&nbsp; England</td>
+			</tr>			
+		</table>
+	</div>
+	<div id="QuaterPhase">
+		<p><h1>Quarter-finals</h1></p>
+		<table class="ListView">
+			<tr>
+				<td colspan="4"><h3 class="head3table">Quater Finals</h3></td>
+			</tr>
+			<tr>
+				<td class="head3table">When / Where</td>
+				<td class="head3table">Team1</td>
+				<td class="head3table">SCORE</td>
+				<td class="head3table">Team2</td>
+			</tr>
+			<tr>
+				<td>06 JUL 2018 <br /> Nizhny Novgorod</td>
+				<td>Uruguay&nbsp;<img src="../Img/flags/mobile_flag_uruguay.svg" alt="Uruguay" class="flags" /></td>
+				<td><h1>0 : 2</h1></td>
+				<td><img src="../Img/flags/mobile_flag_france.svg" alt="France" class="flags" />&nbsp;France</td>
+			</tr>
+			<tr>
+				<td>06 JUL 2018 <br /> Kazan Arena</td>
+				<td>Brazil &nbsp;<img src="../Img/flags/mobile_flag_brazil.svg" alt="Brazil" class="flags" /></td>
+				<td><h1>1 : 2</h1></td>
+				<td><img src="../Img/flags/mobile_flag_belgium.svg" alt="Belgium" class="flags" />&nbsp;Belgium</td>
+			</tr>
+			<tr>
+				<td>07 JUL 2018 <br /> Samara Arena</td>
+				<td>Sweeden &nbsp;<img src="../Img/flags/mobile_flag_sweden.svg" alt="W55" class="flags" /></td>
+				<td><h1>0 : 2</h1></td>
+				<td><img src="../Img/flags/mobile_flag_england.svg" alt="W56" class="flags" />&nbsp; England</td>
+			</tr>
+			<tr>
+				<td>07 JUL 2018 <br /> Fisht Stadium</td>
+				<td>Russia &nbsp;<img src="../Img/flags/mobile_flag_russia.svg" alt="Russia" class="flags" /></td>
+				<td><h1>2 : 2</h1>Croatia win on penalties (3 - 4)</td>
+				<td><img src="../Img/flags/mobile_flag_croatia.svg" alt="Croatia" class="flags" />&nbsp; Croatia</td>
+			</tr>			
+		</table>
+	</div>
+	<div id="SemiFinalPhase">
+		<p><h1>Semi Final</h1></p>
+		<table class="ListView">
+			<tr>
+				<td colspan="4"><h3 class="head3table">Semi and Finals</h3></td>
+			</tr>
+			<tr>
+				<td class="head3table">When / Where</td>
+				<td class="head3table">Team1</td>
+				<td class="head3table">SCORE</td>
+				<td class="head3table">Team2</td>
+			</tr>
+			<tr>
+				<td colspan="4">Semi-Finals</td>
+			</tr>
+			<tr>
+				<td>10 JUL 2018 <br /> St Petersburg</td>
+				<td>France&nbsp;<img src="../Img/flags/mobile_flag_france.svg" alt="France" class="flags" /></td>
+				<td><h1>1 : 0</h1></td>
+				<td><img src="../Img/flags/mobile_flag_belgium.svg" alt="Belgium" class="flags" />&nbsp;Belgium</td>
+			</tr>
+			<tr>
+				<td>11 JUL 2018 <br /> Luzhniki Stadium (Moscow)</td>
+				<td>Croatia &nbsp;<img src="../Img/flags/mobile_flag_croatia.svg" alt="Croatia" class="flags" /></td>
+				<td><h1>2 : 1</h1>Croatia win after extra time</td>
+				<td><img src="../Img/flags/mobile_flag_england.svg" alt="England" class="flags" />&nbsp;England</td>
+			</tr>
+			<tr>
+				<td colspan="4"><h1>Play-off for third place</h1></td>
+			</tr>
+			<tr>
+				<td>14 JUL 2018 <br /> St Petersburg</td>
+				<td>Belgium &nbsp;<img src="../Img/flags/mobile_flag_belgium.svg" alt="Belgium" class="flags" /></td>
+				<td>2 : 0</td>
+				<td><img src="../Img/flags/mobile_flag_england.svg" alt="England" class="flags" />&nbsp; England</td>
+			</tr>		
+		</table>
+	</div>
+	<div id="FinalPhase">
+		<p><h1>Formidable France secure second title</h1></p>
+		<table class="ListView" style="text-align: left; width: 100%;">
+			<tr>
+				<td colspan="4"><h1>* * * F I N A L * * *</h1></td>
+			</tr>
+			<tr>
+				<td>07 JUL 2018 <br /> Luzhniki Stadium (Moscow)</td>
+				<td>France&nbsp;<img src="../Img/flags/mobile_flag_france.svg" alt="France" class="flags" /></td>
+				<td>4 : 2</td>
+				<td><img src="../Img/flags/mobile_flag_croatia.svg" alt="Croatia" class="flags" />&nbsp; Croatia</td>
+			</tr>
+			<tr>
+				<td colspan="4" style="text-align: left; color: red;">
+					<ul>
+						<li>France win their second FIFA World Cup title </li>
+						<li>Goals from Antoine Griezmann, Paul Pogba and Kylian Mbappe help secure victory</li>
+						<li>Mario Mandzukic scored at both ends, with Ivan Perisic also on the scoresheet </li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" style="text-align: left;">
+					<p>France have won the 2018 FIFA World Cup Russia after defeating Croatia 4-2 in a thoroughly entertaining Final at the Luzhniki Stadium in Moscow in what was a fitting end to an outstanding tournament.</p>
+					<p>Despite Croatia having the majority of possession in the opening stages, France took the lead in somewhat fortuitous circumstances. Antoine Griezmann's lofted free kick from the French right was nodded into his own net by Mario Mandzukic.</p>
+					<p>Ivan Perisic levelled with a calm effort from the edge of the penalty area, but he would turn from hero to villain. A cross from the French right-hand side was handled by the Croatia No4, with a penalty awarded after a VAR review.</p>
+					<p>After the interval, France increased their lead through Paul Pogba, whose performances in the tournament deserved a goal in its finale. After Kylian Mbappe stretched the Croatian defence, Griezmann teed up Pogba, who finished after seeing his initial effort blocked.</p>
+					<p>After his tireless running tired the Croatian defence, it was only fitting that Mbappe himself got on the scoresheet, hitting a sweetly-struck effort from the edge of the penalty area with which Danijel Subasic stood no chance.</p>
+					<p>Mandzukic then scored in the same net, but this time to Croatia's advantage, capitalising on some carelessness by Hugo Lloris to reduce the deficit.</p>
+					<p>In the end, the big No17's strike was not enough to spark yet another miraculous Croatian comeback, and Les Bleus emulate their heroes of 1998 - including coach Didier Deschamps - in securing their second World Cup title.</p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4"><a href="https://www.fifa.com/worldcup/matches/match/300331552/#match-summary">Match Summary</a></td>				
+			</tr>			
+		</table>
+	</div>	
+	<br /><br />
+	<div>
+		<a href="https://www.fifa.com/worldcup/groups/" target="_blan">Referrence: 2018 FIFA Groups</a>
+	</div>
+	<div id="footerDiv">
+		<h4> webmaster: Alexey Zapromyotov </h4>
+	</div>
+</body>
+<script type="text/javascript" src="../JS/topmenu.js"></script>
+</html>
+

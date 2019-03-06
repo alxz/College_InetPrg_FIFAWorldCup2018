@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- By Alexey Zapromyotov, 1811688
+     Desription: All teams Page for the Project
+	   Date: June-July-2018              -->
+<title>Welcome Page</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css" id="mainStyle">
+	h1 {
+		text-align: center; 
+		color: blue;
+	}
+	h2 {
+		text-align: center;
+		vertical-align: bottom;
+		color: #FFFFF0;
+	}
+	h4 {
+		text-align: center;
+		color: navy;
+	}
+	td {
+		border: 0px solid #778899;
+		margin: 0px;
+		padding: 1px;
+		text-align: left;
+	}
+	td.Groups {
+		border: 5px solid #778899;
+	}
+	.bkgrndPage {text-align: left;}
+	#detailsGroups {
+		text-align: center;
+		margin: 5px;
+		padding: 0px;
+		border: 5px solid #B0C4DE;
+	}
+	 #logoImg {
+        width: 70px;
+       }
+    #footerDiv {
+    	width: 90%;
+    	float: none;
+    	padding: 5px 20px;
+    }
+	.descriptDiv {
+	    width: 80%;
+    	display: table;
+        margin: 0 auto;
+        padding: 10px;
+	}
+    .teamsDiv {
+    	width: 80%;
+    	display: table;
+        margin: 0 auto;
+        padding: 10px;
+		display: none;
+    }
+    .tableName {
+    	background-color: #778899;
+    	color: #FFFACD;
+    	text-align: center;
+    	margin: 0px;
+    	padding: 15px;
+    	width: 50%;
+    	border: 0px solid #778899;
+    	vertical-align: bottom;
+    }
+    img.flags {
+    	width: 30%;
+    }
+    td.fright {
+    	text-align: right;
+    	padding: 0px 5px;
+    }
+    td.grcenter {
+    	text-align: center;
+    	border-bottom: 1px solid #778899;
+    }
+    .playersList  {
+    	border: 1px solid grey;
+    	text-align: center;
+    	width: 80%;
+    	display: table;
+        margin: 0 auto;
+        padding: 0px;
+    }
+    .playersList td {
+    	border: 1px solid grey;
+    	text-align: center;
+    }
+    .teamInfo {
+    	width: 83%;
+    	float: left;
+    }
+    .teamLogo {
+    	width: 17%;
+    	float: left;
+    }
+    .teamLogoImg {
+    	width: 120px;
+    	height: 150px;
+    	border: 1px solid lightgrey;
+    	display: table;
+        margin: 0 auto;
+    }
+    .playersList {
+    	width: 100%;
+    	display: table;
+        margin: 0 auto;
+    	float: left;
+    }
+    .squadList {
+    	width: 100%;
+    	display: table;
+        margin: 0 auto;
+    	float: left;
+    }
+</style>
+</head>
+<body class="bkgrndPage"><div id="AboveheaderDiv"></div>
+<div id="headerDiv">	
+</div><h1>World Cup 2018 groups</h1>
+	<div class="descriptDiv">
+		<p>A few teams have qualified, a few have been eliminated. 
+		The 2018 Fifa World Cup's eight groups are shaping up nicely as we head through the second round of 
+		games – but who is in best shape to progress to the round of 16? Here are the group tables, latest standings and permutations.</p>
+		<p>
+			<input type="search" id="mySearch" placeholder="Search for a team..">
+		&nbsp;&nbsp;&nbsp;
+		<button onclick="myFind()">Find</button>
+		</p>
+
+		<div id="searchRes"></div>
+		<div class="descriptDiv">
+		<p>
+			<a href="https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads" target="_blank">2018 FIFA World Cup squads</a>
+		</p>
+		</div>
+			<table id="detailsGroups">
+					<tr>
+						<td colspan="8" class="tableName">
+							<div style="width: 80%; float: left;"><h2> RUSSIA 2018 Fifa World Cup </h2></div>
+							<div style="width: 20%; float: left;"><img src="../Img/logo_wc2018.png" id="logoImg" alt="logoFIFA2018" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td class="grcenter" colspan="2" ><h3>Group A</h3></td>
+						<td class="grcenter" colspan="2"><h3>Group B</h3></td>
+						<td class="grcenter" colspan="2"><h3>Group C</h3></td>
+						<td class="grcenter" colspan="2"><h3>Group D</h3></td>
+					</tr>
+					<tr>
+						<td class="fright"><img src="../Img/flags/mobile_flag_russia.svg" alt="Russia" class="flags" /></td><td>Russia</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_portugal.svg" alt="Portugal" class="flags" /></td><td>Portugal</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_france.svg" alt="France" class="flags" /></td><td>France</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_argentina.svg" alt="Argentina" class="flags" /></td><td>Argentina</td>
+					</tr>
+					<tr>
+						<td class="fright"><img src="../Img/flags/mobile_flag_saudi_arabia.svg" alt="Sarabi" class="flags" /></td><td>S.Arabia</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_spain.svg" alt="Spain" class="flags" /></td><td>Spain</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_australia.svg" alt="Australia" class="flags" /></td><td>Australia</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_iceland.svg" alt="Iceland" class="flags" /></td><td>Iceland</td>
+					</tr>
+					<tr>
+						<td class="fright"><img src="../Img/flags/mobile_flag_egypt.svg" alt="Egypt" class="flags" /></td><td>Egypt</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_morocco.svg" alt="Moroco" class="flags" /></td><td>Moroco</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_peru.svg" alt="Peru" class="flags" /></td><td>Peru</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_croatia.svg" alt="Croatia" class="flags" /></td><td>Croatia</td>
+					</tr>
+					<tr>
+						<td class="fright"><img src="../Img/flags/mobile_flag_uruguay.svg" alt="Uruguay" class="flags" /></td><td>Uruguay</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_iran.svg" alt="Iran" class="flags" /></td><td>Iran</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_denmark.svg" alt="Denmark" class="flags" /></td><td>Denmark</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_nigeria.svg" alt="Nigeria" class="flags" /></td><td>Nigeria</td>
+					</tr>
+
+					<tr>
+						<td class="grcenter"  colspan="2"><h3>Group E</h3></td>
+						<td class="grcenter"  colspan="2"><h3>Group F</h3></td>
+						<td class="grcenter"  colspan="2"><h3>Group G</h3></td>
+						<td class="grcenter"  colspan="2"><h3>Group H</h3></td>
+					</tr>
+					<tr>
+						<td class="fright"><img src="../Img/flags/mobile_flag_brazil.svg" alt="Brazil" class="flags" /></td><td>Brazil</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_germany.svg" alt="Germany" class="flags" /></td><td>Germany</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_belgium.svg" alt="Belgium" class="flags" /></td><td>Belgium</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_poland.svg" alt="Poland" class="flags" /></td><td>poland</td>
+					</tr>
+					<tr>
+						<td class="fright"><img src="../Img/flags/mobile_flag_switzerland.svg" alt="Switzld" class="flags" /></td><td>Switzld</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_mexico.svg" alt="Mexico" class="flags" /></td><td>Mexico</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_panama.svg" alt="Panama" class="flags" /></td><td>Panama</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_senegal.svg" alt="Senegal" class="flags" /></td><td>Senegal</td>
+					</tr>
+					<tr>
+						<td class="fright"><img src="../Img/flags/mobile_flag_costa_rica.svg" alt="CRica" class="flags" /></td><td>C.Rica</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_sweden.svg" alt="Sweden" class="flags" /></td><td>Sweden</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_tunisia.svg" alt="Tunisia" class="flags" /></td><td>Tunisia</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_colombia.svg" alt="Colombia" class="flags" /></td><td>Colombia</td>
+					</tr>
+					<tr>
+						<td class="fright"><img src="../Img/flags/mobile_flag_serbia.svg" alt="Serbia" class="flags" /></td><td>Serbia</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_south_korea.svg" alt="SKorea" class="flags" /></td><td>S.Korea</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_england.svg" alt="England" class="flags" /></td><td>England</td>
+						<td class="fright"><img src="../Img/flags/mobile_flag_japan.svg" alt="Japan" class="flags" /></td><td>Japan</td>
+					</tr>
+			</table>
+	</div>
+	<div class="descriptDiv">
+		<p>	The 2018 FIFA World Cup is an international football tournament being held in Russia from 14 June to 15 July 2018. The 32 national teams involved in the tournament were required to register a squad of 23 players, including three goalkeepers. Only players in these squads are eligible to take part in the tournament.</p>
+		<p>A provisional list of 35 players per national team was submitted to FIFA by 14 May 2018, one month prior to the opening match of the tournament. From the preliminary squad, the final list of 23 players per national team were submitted to FIFA by 4 June, 10 days prior to the opening match of the tournament. FIFA published the final lists with squad numbers on their website the same day. Teams are permitted to make late replacements in the event of serious injury, at any time up to 24 hours before their first game, where the replacement players do not need to be in the preliminary squad.</p>
+		<p>For players named in the 35-player preliminary squad, there was a mandatory rest period between 21 and 27 May 2018, except for those involved in the 2018 UEFA Champions League Final played on 26 May. Initially the preliminary squads were to have 30 players but, in February 2018, it was announced that the number of players to be named in the provisional squads was increased to 35.</p>
+		<p>The position listed for each player is per the official squad list published by FIFA. The age listed for each player is on 14 June 2018, the first day of the tournament. The numbers of caps and goals listed for each player do not include any matches played after the start of tournament. The club listed is the club for which the player last played a competitive match prior to the tournament. The nationality for each club reflects the national association (not the league) to which the club is affiliated. A flag is included for coaches that are of a different nationality than their own national team.</p>
+	</div>
+	<div id="Russia" class="teamsDiv">
+		<div class="teamInfo">
+		<h1>Russia national football team</h1>
+		<p>
+			The Russia national football team represents Russia in association football and is controlled by the Russian Football Union (Rossiyskiy Futboľnyj Soyuz), the governing body for football in Russia. Russia is a member of UEFA, they won the first edition of the respective continental competition in 1960 as the Soviet Union (of which Russia is the successor).
+		</p>
+		<p>Russia's home ground is the Luzhniki Stadium in Moscow and their current head coach is Stanislav Cherchesov.
+		</p>
+		</div>
+		<div class="teamLogo">
+			<img src="../Img/Coat_of_Arms_of_the_Russian_Federation.png" alt="Russian Team" class="teamLogoImg" />
+		</div><br /><br /><br />
+		<div class="squadList">
+		<h3>The following 23 players were called up for the 2018 FIFA World Cup squad.</h3>
+		<table class="playersList">
+			<tr>
+			<td>No.</td>	<td>Pos.</td>	<td>Player</td>	<td>Date of birth</td>  <td>Goals</td>	<td>Club</td>
+			</tr>
+			<tr>
+				<td>1</td>	<td>GK.</td>	<td>Igor Akinfeev (Captain)</td>	<td>8 April 1986 (age 32)</td>  <td>0</td>	<td>CSKA Moscow</td>
+			</tr>
+			<tr>
+				<td>12</td>	<td>GK.</td>	<td>Andrey Lunyov</td>	<td>13 November 1991 (age 26)</td>  <td>0</td>	<td>Zenit Saint Petersburg</td>
+			</tr>
+			<tr>
+				<td>20</td>	<td>GK.</td>	<td>Vladimir Gabulov</td>	<td>19 October 1983 (age 34)</td>  <td>0</td>	<td>Club Brugge</td>
+			</tr>
+			<tr>
+				<td>2</td>	<td>DF.</td>	<td>Mario Fernandes</td>	<td>19 September 1990 (age 27)</td>  <td>1</td>	<td>CSKA Moscow</td>
+			</tr>
+			<tr>
+				<td>3</td>	<td>DF.</td>	<td>Ilya Kutepov</td>	<td>29 July 1993 (age 24)</td>  <td>1</td>	<td>Spartak Moscow</td>				
+			</tr>
+
+			<tr>
+				<td>4</td>	<td>DF.</td>	<td>Sergei Ignashevich</td>	<td>14 July 1979 (aged 38)</td>  <td>0</td>	<td>CSKA Moscow</td>
+			</tr>
+			<tr>
+				<td>5</td>	<td>DF.</td>	<td>Andrei Semyonov</td>	<td>24 March 1989 (aged 29)</td>  <td>0</td>	<td>Akhmat Grozny</td>
+			</tr>
+			<tr>
+				<td>6</td>	<td>DF.</td>	<td>Denis Cheryshev</td>	<td>26 December 1990 (aged 27)</td>  <td>1</td>	<td>Villarreal</td>				
+			</tr>
+
+			<tr>
+				<td>7</td>	<td>DF.</td>	<td>Daler Kuzyayev</td>	<td>15 January 1993 (aged 25)</td>  <td>0</td>	<td> Zenit Saint Petersburg</td>
+			</tr>
+			<tr>
+				<td>8</td>	<td>MF.</td>	<td>Yury Gazinsky</td>	<td>20 July 1989 (aged 28)</td>  <td>0</td>	<td>Krasnodar</td>
+			</tr>
+			<tr>
+				<td>9</td>	<td>MF.</td>	<td>Alan Dzagoev</td>	<td>17 June 1990 (aged 27)</td>  <td>9</td>	<td>CSKA Moscow</td>				
+			</tr>
+			<tr>
+				<td>10</td>	<td>FW.</td>	<td>Fyodor Smolov</td>	<td> February 1990 (aged 28)</td>  <td>12</td>	<td>Krasnodar</td>				
+			</tr>			
+
+		</table>
+		<br /><br /><br />
+	</div>
+	</div>
+		<div id="Argentina" class="teamsDiv">
+		<h1>Argentina national football team</h1>
+		
+		<div class="teamInfo">
+		<p>
+			The Argentina national football team represents Argentina in football and is controlled by the Argentine Football Association (AFA), the governing body for football in Argentina. Argentina's home stadium is Estadio Monumental Antonio Vespucio Liberti in Buenos Aires..
+		</p>
+		<p>La Selección (national team), also known as the Albicelestes, has appeared in five World Cup finals, including the first final in 1930, which they lost 4–2 to Uruguay. Argentina won in their next final appearance in 1978, beating the Netherlands at extra time, 3–1. Argentina, led by Diego Maradona won again in 1986, a 3–2 victory over West Germany. They again made the World Cup finals in 1990, and lost 1–0 to West Germany following a controversial penalty call in the 87th minute. Argentina, led by Lionel Messi made their fifth appearance in a World Cup final in 2014, again losing to Germany, 1–0 during extra-time. Argentina's World Cup winning managers are César Luis Menotti in 1978, and Carlos Bilardo in 1986.</p>
+		<p>Argentina has been very successful in the Copa América, winning it 14 times and also winning the 'extra' South American Championships in 1941, 1945 and 1946. The team also won the 1992 FIFA Confederations Cup and the 1993 Artemio Franchi Trophy. The Argentine olympic team won the Olympics football tournaments in Athens 2004 and Beijing 2008.</p>
+		<p>Argentina, Brazil, Germany and France are the only national teams that have won the three most important men's titles recognized by FIFA: the World Cup, the Confederations Cup, and the Olympic tournament. They have also won their respective continental championship (Copa América for Argentina and Brazil, and UEFA European Championship for Germany and France).</p>
+		</p>
+		</div>
+		<div class="teamLogo">
+			<img src="../Img/Afa_logo_jerseys.png" alt="Argentina Team" class="teamLogoImg"/>
+		</div>
+		<br /><br /><br />
+		<div class="squadList">
+		<h3>The following 23 players were called up for the 2018 FIFA World Cup squad.</h3>
+		<table class="playersList">
+			<tr>
+			<td>No.</td>	<td>Pos.</td>	<td>Player</td>	<td>Date of birth</td>  <td>Goals</td>	<td>Club</td>
+			</tr>
+			<tr>
+				<td>1</td>	<td>GK.</td>	<td>Nahuel Guzmán</td>	<td>10 February 1986 (age 32)</td>  <td>0</td>	<td>UANL</td>
+			</tr>
+			<tr>
+				<td>12</td>	<td>GK.</td>	<td>Franco Armani</td>	<td>16 October 1986 (age 31)</td>  <td>0</td>	<td>River Plate</td>
+			</tr>
+			<tr>
+				<td>23</td>	<td>GK.</td>	<td>Willy Caballero</td>	<td>28 September 1981 (age 36)</td>  <td>0</td>	<td>Chelsea</td>
+			</tr>
+			<tr>
+				<td>2</td>	<td>DF.</td>	<td>Gabriel Mercado</td>	<td>18 March 1987 (age 31)</td>  <td>4</td>	<td>Sevilla</td>
+			</tr>
+						<tr>
+				<td>3</td>	<td>DF.</td>	<td>Nicolás Tagliafico</td>	<td>31 August 1992 (age 25)</td>  <td>0</td>	<td>Ajax</td>					
+			</tr>
+
+			<tr>
+				<td>10</td>	<td>FW.</td>	<td>Kylian Mbappé</td>	<td>20 December 1998 (aged 19)</td>  <td>4</td>	<td>Paris Saint-Germain</td>
+			</tr>
+			<tr>
+				<td>11</td>	<td>GK.</td>	<td>Ousmane Dembélé</td>	<td>28 September 1981 (age 36)</td>  <td>0</td>	<td>Chelsea</td>
+			</tr>
+			<tr>
+				<td>12</td>	<td>DF.</td>	<td>Corentin Tolisso</td>	<td>18 March 1987 (age 31)</td>  <td>4</td>	<td>Sevilla</td>
+			</tr>
+			<tr>
+				<td>7</td>	<td>FW.</td>	<td>Antoine Griezmann</td>	<td>21 March 1991 (aged 27)</td>  <td>20</td>	<td>Ajax</td>					
+			</tr>
+		</table>
+		<br /><br /><br />
+	</div>
+	</div>
+	
+	<div id="France" class="teamsDiv">
+		<h1>France national football team</h1>
+		
+		<div class="teamInfo">
+		<p>The France national football team (French: Équipe de France de football) represents France in international football 
+		and is controlled by the French Football Federation, also known as FFF, or in French: Fédération française de football. 
+		The team's colours are blue, white and red, and the coq gaulois its symbol. France are colloquially known as Les Bleus (The Blues). 
+		The French side are the reigning World Cup holders, having won the 2018 FIFA World Cup on 15 July 2018.</p>
+		<p>France play home matches at the Stade de France in Saint-Denis, Paris, and the manager is Didier Deschamps. They have won 
+		two FIFA World Cups, two UEFA European Championships, two FIFA Confederations Cups and one Olympic tournament. 
+		France experienced much of its success in four major eras: in the 1950s, 1980s, late 1990s/early 2000s, and late 2010s, 
+		respectively, which resulted in numerous major honours. France was one of the four European teams that participated in 
+		the inaugural World Cup in 1930 and, although having been eliminated in the qualification stage six times, is one of 
+		only three teams that have entered every World Cup qualifying cycle.</p>
+		<p>In 1958, the team, led by Raymond Kopa and Just Fontaine, finished in third place at the FIFA World Cup. In 1984, France, 
+		led by Ballon d'Or winner Michel Platini, won UEFA Euro 1984.</p>
+		<p>Under the captaincy of Didier Deschamps and three-time FIFA World Player of the Year Zinedine Zidane, 
+		France won the FIFA World Cup in 1998. Two years later, the team triumphed at UEFA Euro 2000. 
+		France won the FIFA Confederations Cup in 2001 and 2003, and reached the 2006 FIFA World Cup final, which it lost 5–3 
+		on penalties to Italy. The team also reached the final of UEFA Euro 2016, where they lost 1–0 to Portugal football in extra time. 
+		<h1>France won the 2018 FIFA World Cup, defeating Croatia 4–2 in the final match on 15 July 2018.</h1></p> 
+		</div>
+		<div class="teamLogo">
+			<img src="../Img/France_national_football_team_seal.png" alt="France Team" class="teamLogoImg"/>
+		</div>
+		<br /><br /><br />
+		<div class="squadList">
+		<h3>The following 26 players were called up for the 2018 FIFA World Cup squad.</h3>
+		<table class="playersList">
+			<tr>
+			<td>No.</td>	<td>Pos.</td>	<td>Player</td>	<td>Date of birth</td>  <td>Goals</td>	<td>Club</td>
+			</tr>
+			<tr>
+				<td>1</td>	<td>GK.</td>	<td>Hugo Lloris (captain)</td>	<td>26 December 1986 (aged 31) </td>  <td>0</td>	<td>Tottenham Hotspur</td>
+			</tr>
+			<tr>
+				<td>2</td>	<td>DF.</td>	<td>Benjamin Pavard</td>	<td>28 March 1996 (aged 22) </td>  <td>0</td>	<td>VfB Stuttgart</td>
+			</tr>
+			<tr>
+				<td>3</td>	<td>DF.</td>	<td>Presnel Kimpembe</td>	<td>13 August 1995 (aged 22)</td>  <td>0</td>	<td>Paris Saint-Germain</td>
+			</tr>
+			<tr>
+				<td>4</td>	<td>DF.</td>	<td>Raphaël Varane</td>	<td>25 April 1993 (aged 25) </td>  <td>2</td>	<td>Real Madrid</td>
+			</tr>
+
+			<tr>
+				<td>10</td>	<td>FW.</td>	<td>Kylian Mbappé</td>	<td>20 December 1998 (aged 19)</td>  <td>4</td>	<td>Paris Saint-Germain</td>
+			</tr>
+			<tr>
+				<td>11</td>	<td>GK.</td>	<td>Ousmane Dembélé</td>	<td>28 September 1981 (age 36)</td>  <td>0</td>	<td>Chelsea</td>
+			</tr>
+			<tr>
+				<td>12</td>	<td>DF.</td>	<td>Corentin Tolisso</td>	<td>18 March 1987 (age 31)</td>  <td>4</td>	<td>Sevilla</td>
+			</tr>
+			<tr>
+				<td>7</td>	<td>FW.</td>	<td>Antoine Griezmann</td>	<td>21 March 1991 (aged 27)</td>  <td>20</td>	<td>Ajax</td>					
+			</tr>
+		</table>
+		<br /><br /><br />
+	</div>
+	</div>
+	
+	<div id="Uruguay" class="teamsDiv">
+		<h1>Uruguay national football team</h1>
+		
+			<div class="teamInfo">
+				<p>The Uruguay national football team represents Uruguay in international association football and is controlled by the Uruguayan Football 
+				Association, the governing body for football in Uruguay. The current head coach is Óscar Tabárez. 
+				The Uruguayan team is commonly referred to as La Celeste (The Sky Blue). The Uruguayan team won the 2011 Copa América. 
+				They have won the Copa América 15 times, being the team that has won the tournament on most occasions. 
+				The team has won the FIFA World Cup twice, including the first World Cup in 1930 as hosts, defeating Argentina 4–2 in the final. 
+				They won their second title in 1950, upsetting host Brazil 2–1 in the final match, which received an attendance higher than any 
+				football match ever.</p>
+				<p>They have won the Gold Medals in football at the Summer Olympics twice, in 1924 and 1928 recognized by FIFA as World Championships, 
+				before the creation of the World Cup. Uruguay also won the 1980 Mundialito, a tournament among former World Cup champions. 
+				In total, Uruguay have won 20 official titles, a world record for the most international titles held by any country. </p>
+			</div>
+		<div class="teamLogo">
+			<img src="../Img/Uruguay_national_football_team_seal.png" alt="Uruguay Team" class="teamLogoImg"/>
+		</div>
+		<br /><br /><br />
+		<div class="squadList">
+			<h3>The following 26 players were called up for the 2018 FIFA World Cup squad.</h3>
+			<table class="playersList">
+				<tr>
+				<td>No.</td>	<td>Pos.</td>	<td>Player</td>	<td>Date of birth</td>  <td>Goals</td>	<td>Club</td>
+				</tr>
+				<tr>
+					<td>1</td>	<td>GK.</td>	<td>Fernando Muslera</td>	<td>16 June 1986 (aged 31)</td>  <td>0</td>	<td>Galatasaray</td>
+				</tr>
+				<tr>
+					<td>2</td>	<td>GK.</td>	<td>José Giménez</td>	<td>20 January 1995 (aged 23)</td>  <td>0</td>	<td>Atlético Madrid</td>
+				</tr>
+				<tr>
+					<td>3</td>	<td>GK.</td>	<td>Diego Godín (captain)</td>	<td>16 February 1986 (aged 32) </td>  <td>0</td>	<td>Atlético Madrid</td>
+				</tr>
+			</table>
+			<br /><br /><br />
+		</div>
+	</div>
+	
+
+
+
+	<div id="Brazil" class="teamsDiv">
+		<h1>Brazil national football team</h1>
+		
+			<div class="teamInfo">
+				<p>The Brazil national football team represents Brazil in international men's association football. Brazil is administered by the Brazilian Football Confederation (CBF), the governing body for football in Brazil. They have been a member of FIFA since 1923 and member of CONMEBOL since 1916.</p>
+				<p>Brazil is the most successful national team in the FIFA World Cup, the main football international competition, being crowned winner five times: 1958, 1962, 1970, 1994 and 2002. Brazil also has the best overall performance in the World Cup, both in proportional and absolute terms, with a record of 73 victories in 109 matches played, 124 goal difference, 237 points, and 18 losses.[12][13] Brazil is the only national team to have played in all World Cup editions without any absence nor need for playoffs.[14] The seleção is likewise the most successful national team in the FIFA Confederations Cup with four titles: 1997, 2005, 2009 and 2013.</p>
+				<p>Brazil is the only national team to have won the World Cup on four different continents: once in Europe (1958 Sweden), once in South America (1962 Chile), twice in North America (1970 Mexico and 1994 United States) and once in Asia (2002 Korea/Japan). They share with France and Argentina, the feat to have won the three most important men's football titles recognized by FIFA: the World Cup, the Confederations Cup, and the Olympic tournament.</p>
+
+			</div>
+		<div class="teamLogo">
+			<img src="../Img/Brazil_national_football_team_seal.png" alt="Brazil Team" class="teamLogoImg"/>
+		</div>
+		<br /><br /><br />
+		<div class="squadList">
+			<h3>The following 23 players were called up for the 2018 FIFA World Cup squad.</h3>
+			<table class="playersList">
+				<tr>
+				<td>No.</td>	<td>Pos.</td>	<td>Player</td>	<td>Date of birth</td>  <td>Goals</td>	<td>Club</td>
+				</tr>
+				<tr>
+					<td>1</td>	<td>GK.</td>	<td>Alisson</td>	<td>2 October 1992 (aged 25)</td>  <td>0</td>	<td>Roma</td>
+				</tr>
+				<tr>
+					<td>2</td>	<td>DF.</td>	<td>Thiago Silva</td>	<td>22 September 1984 (aged 33)</td>  <td>5</td>	<td>Paris Saint-Germain</td>
+				</tr>
+				<tr>
+					<td>3</td>	<td>GK.</td>	<td>Miranda</td>	<td>7 September 1984 (aged 33)</td>  <td>2</td>	<td>Inter Milan</td>
+				</tr>
+				<tr>
+					<td>4</td>	<td>GK.</td>	<td>Pedro Geromel</td>	<td>21 September 1985 (aged 32)</td>  <td>0</td>	<td>Gremio</td>
+				</tr>
+				<tr>
+					<td>5</td>	<td>MF.</td>	<td>Casemiro</td>	<td>23 February 1992 (aged 26)</td>  <td>0</td>	<td>Real Madrid</td>
+				</tr>
+				<tr>
+					<td>6</td>	<td>DF.</td>	<td>Filipe Luís</td>	<td>9 August 1985 (aged 32)</td>  <td>2</td>	<td>Atlético Madrid</td>
+				</tr>
+				<tr>
+					<td>7</td>	<td>FW.</td>	<td>Douglas Costa</td>	<td>14 September 1990 (aged 27)</td>  <td>3</td>	<td>Juventus</td>
+				</tr>
+				<tr>
+					<td>8</td>	<td>MF.</td>	<td>Renato Augusto</td>	<td>8 February 1988 (aged 30)</td>  <td>5</td>	<td>Beijing Sinobo Guoan</td>
+				</tr>		
+				<tr>
+					<td>9</td>	<td>FW.</td>	<td>Gabriel Jesus</td>	<td>3 April 1997 (aged 21)</td>  <td>10</td>	<td>Manchester City</td>
+				</tr>
+				<tr>
+					<td>10</td>	<td>FW.</td>	<td>Neymar</td>	<td>5 February 1992 (aged 26)</td>  <td>55</td>	<td> Paris Saint-Germain</td>
+				</tr>	
+			</table>
+			<br /><br /><br />
+		</div>
+	</div>
+
+	<div id="Croatia" class="teamsDiv">
+		<h1>Croatia national football team</h1>
+		
+			<div class="teamInfo">
+				<p>The Croatia national football team represents Croatia in international association football matches. The team is controlled by the Croatian Football Federation (HNS), the nation's governing body for football, and is widely supported throughout the country due to the ever-present popularity of the sport. Most home matches are played at the Stadion Maksimir in Zagreb or at the Stadion Poljud in Split, though other smaller venues are also used occasionally</p>
+				<p>Brazil is the most successful national team in the FIFA World Cup, the main football international competition, being crowned winner five times: 1958, 1962, 1970, 1994 and 2002. Brazil also has the best overall performance in the World Cup, both in proportional and absolute terms, with a record of 73 victories in 109 matches played, 124 goal difference, 237 points, and 18 losses.[12][13] Brazil is the only national team to have played in all World Cup editions without any absence nor need for playoffs.[14] The seleção is likewise the most successful national team in the FIFA Confederations Cup with four titles: 1997, 2005, 2009 and 2013.</p>
+				<p>Brazil is the only national team to have won the World Cup on four different continents: once in Europe (1958 Sweden), once in South America (1962 Chile), twice in North America (1970 Mexico and 1994 United States) and once in Asia (2002 Korea/Japan). They share with France and Argentina, the feat to have won the three most important men's football titles recognized by FIFA: the World Cup, the Confederations Cup, and the Olympic tournament.</p>
+
+			</div>
+		<div class="teamLogo">
+			<img src="../Img/Croatia_national_football_team_seal.png" alt="Croatia Team" class="teamLogoImg"/>
+		</div>
+		<br /><br /><br />
+		<div class="squadList">
+			<h3>The following 23 players were called up for the 2018 FIFA World Cup squad.</h3>
+			<table class="playersList">
+				<tr>
+				<td>No.</td>	<td>Pos.</td>	<td>Player</td>	<td>Date of birth</td>  <td>Goals</td>	<td>Club</td>
+				</tr>
+				<tr>
+					<td>1</td>	<td>GK.</td>	<td>Dominik Livaković</td>	<td>9 January 1995 (aged 23)</td>  <td>0</td>	<td>Dinamo Zagreb</td>
+				</tr>
+				<tr>
+					<td>2</td>	<td>DF.</td>	<td>Šime Vrsaljko</td>	<td>10 January 1992 (aged 26)</td>  <td>5</td>	<td> Atlético Madrid</td>
+				</tr>
+				<tr>
+					<td>3</td>	<td>DF.</td>	<td>Ivan Strinić</td>	<td>17 July 1987 (aged 30)</td>  <td>2</td>	<td>Sampdoria</td>
+				</tr>
+				<tr>
+					<td>4</td>	<td>FW.</td>	<td>Ivan Perišić</td>	<td>2 February 1989 (aged 29)</td>  <td>0</td>	<td>Gremio</td>
+				</tr>
+				<tr>
+					<td>5</td>	<td>DF.</td>	<td>Vedran Ćorluka</td>	<td>5 February 1986 (aged 32)</td>  <td>0</td>	<td>Lokomotiv Moscow</td>
+				</tr>
+				<tr>
+					<td>6</td>	<td>DF.</td>	<td>Dejan Lovren</td>	<td>5 July 1989 (aged 28)</td>  <td>2</td>	<td>Atlético Madrid</td>
+				</tr>
+				<tr>
+					<td>7</td>	<td>MF.</td>	<td>Ivan Rakitić</td>	<td>10 March 1988 (aged 30)</td>  <td>3</td>	<td> Barcelona</td>
+				</tr>
+				<tr>
+					<td>8</td>	<td>MF.</td>	<td>Mateo Kovačić</td>	<td>6 May 1994 (aged 24))</td>  <td>5</td>	<td>Beijing Sinobo Guoan</td>
+				</tr>		
+				<tr>
+					<td>9</td>	<td>FW.</td>	<td>Andrej Kramarić</td>	<td>19 June 1991 (aged 26)</td>  <td>10</td>	<td>Manchester City</td>
+				</tr>
+				<tr>
+					<td>10</td>	<td>MF.</td>	<td>Luka Modrić (captain)</td>	<td>9 September 1985 (aged 32)</td>  <td>12</td>	<td>Real Madrid</td>
+				</tr>	
+			</table>
+			<br /><br /><br />
+		</div>
+	</div>
+
+	<div id="Portugal" class="teamsDiv">
+		<h1>Portugal national football team</h1>
+		
+			<div class="teamInfo">
+				<p>The Portugal national football team (Portuguese: Seleção Portuguesa de Futebol, pronounced [sɨlɛˈsɐ̃w̃ puɾtuˈgezɐ dɨ futɨˈbɔl]) represents Portugal in international men's association football competition since 1921. It is controlled by the Portuguese Football Federation, the governing body for football in Portugal</p>
+				<p>Portugal's first participation in a major tournament finals, at the 1966 FIFA World Cup, saw a team featuring famed striker Eusébio finish in third place. The next two times Portugal qualified for the World Cup finals were in 1986 and 2002, going out in the first round both times. Portugal also made it to the semi-finals of the UEFA Euro 1984 final tournament, losing 3–2 after extra time to the hosts and eventual winners France. The team reached the semi-finals of Euro 2000, the 2006 World Cup and Euro 2012, as well as the final of Euro 2004, the latter on home soil. At Euro 2016, Portugal won its first ever major trophy, defeating hosts France 1–0 after extra time, with the winning goal scored by Eder. With the win, Portugal qualified and made its first appearance in the FIFA Confederations Cup held in Russia, where they finished third.</p>
+				<p> Following their Euro 2016 victory, Portugal participated in the 2017 FIFA Confederations Cup, where they finished third. In FIFA World Cup, Portugal finished group B as first place-tie with Spain, and moved on to Round 16</p>
+
+			</div>
+		<div class="teamLogo">
+			<img src="../Img/Portuguese_Football_Federation.png" alt="Portugal Team" class="teamLogoImg"/>
+		</div>
+		<br /><br /><br />
+		<div class="squadList">
+			<h3>The following 35 players were called up for the 2018 FIFA World Cup squad.</h3>
+			<table class="playersList">
+				<tr>
+				<td>No.</td>	<td>Pos.</td>	<td>Player</td>	<td>Date of birth</td>  <td>Goals</td>	<td>Club</td>
+				</tr>
+				<tr>
+					<td>1</td>	<td>GK.</td>	<td>Rui Patrício</td>	<td>15 February 1988 (aged 30)</td>  <td>0</td>	<td>Sporting CP</td>
+				</tr>
+				<tr>
+					<td>2</td>	<td>DF.</td>	<td>Bruno Alves</td>	<td>27 November 1981 (aged 36)</td>  <td>11</td>	<td>Rangers</td>
+				</tr>
+				<tr>
+					<td>3</td>	<td>DF.</td>	<td>Pepe</td>	<td>26 February 1983 (aged 35)</td>  <td>5</td>	<td>Beşiktaş</td>
+				</tr>
+				<tr>
+					<td>4</td>	<td>MF.</td>	<td>Manuel Fernandes</td>	<td>5 February 1986 (aged 32)</td>  <td>3</td>	<td>Lokomotiv Moscow</td>
+				</tr>
+				<tr>
+					<td>5</td>	<td>DF.</td>	<td>Raphaël Guerreiro</td>	<td>22 December 1993 (aged 24)</td>  <td>2</td>	<td>Borussia Dortmund</td>
+				</tr>
+				<tr>
+					<td>6</td>	<td>DF.</td>	<td>José Fonte</td>	<td>22 December 1983 (aged 34)</td>  <td>0</td>	<td>Dalian Yifang</td>
+				</tr>
+				<tr>
+					<td>7</td>	<td>FW.</td>	<td>Cristiano Ronaldo (captain)</td>	<td>5 February 1985 (aged 33)</td>  <td>81</td>	<td>Real Madrid</td>
+				</tr>
+				<tr>
+					<td>8</td>	<td>MF.</td>	<td>João Moutinho</td>	<td>8 September 1986 (aged 31)</td>  <td>7</td>	<td>Monaco</td>
+				</tr>		
+				<tr>
+					<td>9</td>	<td>FW.</td>	<td>André Silva</td>	<td>19 January 1993 (aged 25)</td>  <td>12</td>	<td>Milan</td>
+				</tr>
+				<tr>
+					<td>10</td>	<td>MF.</td>	<td>João Mário</td>	<td>10 August 1994 (aged 23)</td>  <td>2</td>	<td>West Ham United</td>
+				</tr>	
+			</table>
+			<br /><br /><br />
+		</div>
+	</div>
+
+<br /><br /><br /><br />
+<div id="footerDiv">
+	<h4> webmaster: Alexey Zapromyotov </h4>
+</div>
+</body>
+<script type="text/javascript" src="../JS/topmenu.js"></script>
+</html>
+

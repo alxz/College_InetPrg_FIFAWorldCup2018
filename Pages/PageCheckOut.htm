@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- By Alexey Zapromyotov, 1811688
+     Desription: Check-Out Page - Shopping cart
+	   Date: July-2018              -->
+<title>Shopping Cart - Check Out</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<style type="text/css" id="mainStyle">
+h4 {
+	text-align: center;
+	color: navy;
+}
+	 #logoImg {
+        width: 100px;
+       }
+    #centerDiv {
+    	width: 100%;
+    	float: none;
+    }
+    #divTop {
+        display: table;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    #footerDiv {
+    	
+    	float: none;
+    	padding: 5px 20px;
+    }
+    #basketDiv {
+        display: table;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    #basketTbl {
+            width: 50%;
+            border: 1px solid lightgrey;
+    }
+    #basketTbl td {
+            margin: 0 auto;
+            padding: 5px;
+            border: 1px solid lightgrey;
+    }
+    img.goodsPreview {
+
+        height: 80px;
+        width: 80px;
+        border: 1px solid lightgrey;
+        margin: 5px;
+        padding: 5px;
+        text-align: center;
+    }
+</style>
+
+</head>
+<body class="bkgrndPage">
+<div id="AboveheaderDiv"></div>
+<div id="headerDiv">	
+</div>
+<h1 align="center" width="90%" id="topMenuH1"> Shopping Cart</h1>
+<div id="divTop">
+<!-- </div> -->
+    <div id="basketDiv">
+        <table id="basketTbl">
+            <tr>
+                <td>ID:</td><td>Qty:</td><td>Unit-Price:</td><td>Totals</td><td>Change</td>
+            </tr>
+        </table>
+<br /><br />
+    <input type="button" name="ClearAll" value="Remove All" onclick="USR_funcReset(); USR_showShoppingCart ();" style="float: left;">
+    &nbsp; &nbsp; &nbsp;
+    <input type="button" name="Billing" value="Shipping and Payment" onClick="location.href='../Pages/PageBilling.htm';" style="float: right;">
+    </div>
+<!-- <div id="basketBottom">   -->  
+    
+    <p> You can modify the cart by removing some items</p>
+</div>
+<br /><br /><br /><br /><br /><br />
+<div id="footerDiv">
+	<h4> webmaster: Alexey Zapromyotov </h4>
+</div>
+</body>
+<script type="text/javascript" src="../JS/topmenu.js"></script>
+<script type="text/javascript">
+    USR_showShoppingCart ();
+</script>
+</html>
+

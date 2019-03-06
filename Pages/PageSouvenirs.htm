@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- By Alexey Zapromyotov, 1811688
+     Desription: Souvenirs Page for the Project
+	   Date: June-July-2018              -->
+<title>Souvenirs</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css" id="mainStyle">
+h4 {
+	text-align: center;
+	color: navy;
+}
+	#detailsTournament {
+		text-align: center;
+		padding: 5px;
+	}
+	.rCol {
+		width: 40%;
+		text-align: right;
+		padding: 0px 5px;
+	}
+	.lCol {
+		width: 60%;
+		text-align: left;
+		padding: 0px 5px;
+	}
+	 #logoImg {
+        width: 100px;
+       }
+    #centerDiv {
+    	width: 100%;
+    	float: none;
+    }
+    #headerDiv {
+    	width: 100%;
+    	float: none;
+    }
+    #footerDiv {
+    	width: 90%;
+    	float: none;
+    	padding: 5px 20px;
+    }
+    .footerImg {
+    		text-align: center;
+    		width: 200px;
+			padding: 10px;
+    }
+    #HeadPageTbl {
+    	width: 100%;
+    	padding: 10px;
+    }
+
+    #goodsTbl {
+    	width: 100%;
+    	border: 1px solid grey;
+    	margin: 5px;
+    	padding: 5px;
+			text-align: center;
+    }
+    #goodsTbl td {
+    	
+    	border: 1px solid grey;
+    	margin: 0px;
+    	padding: 5px;
+
+    }
+    #goodsTbl th{
+    	background-color: #778899;
+    	color: #FFFACD;
+    	text-align: center;
+    	margin: 0px;
+    	padding: 15px;
+    	border: 0px solid #778899;
+    	vertical-align: bottom;
+    }
+    td.alignCtbl {
+    	text-align: center;
+    	margin: 25px;
+    	padding: 25px;
+    }
+    img.goodsPreview {
+
+    	height: 60px;
+    	width: 60px;
+    	border: 1px solid lightgrey;
+    	margin: 5px;
+    	padding: 5px;
+    	text-align: center;
+    }
+			.zoom {
+			padding: 5px;
+			transition: transform .2s; /* Animation */
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			float: left;
+		}
+
+		.zoom:hover {
+			transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+		}
+		.goodsDesc {
+			width: 70%; 
+			float: left; 
+			text-align: left; 
+			vertical-align: middle;
+			padding: 10px 10px 10px 20px;
+		}
+		.idRow {
+			width: 10px;
+			text-align: center;
+			font-weight: bold;
+		}
+		#basketTbl {
+			width: 50%;
+			border: 1px solid lightgrey;
+		}
+		#basketTbl td {
+			margin: 0px;
+			padding: 5px;
+			border: 1px solid lightgrey;
+		}
+	#basketDiv {
+		display: none;
+	}
+</style>
+</head>
+<body class="bkgrndPage">
+<div id="AboveheaderDiv"></div>
+<div id="headerDiv">
+</div>
+<h1 align="center" width="90%" id="topMenuH1"> 2018 FIFA World Cup - Celebrate Big Moments!</h1>
+<table id="HeadPageTbl"> 
+	<tr>
+		<td colspan="2">
+			<img src="../Img/2018_FIFA_WorldCup.png" id="logoImg" />
+		</td>
+		<td colspan="3">
+			<div class="divHeadPage">
+				<p>	The 2018 FIFA World Cup is the 21st FIFA World Cup.
+					If you want to keep some holiday spirit to your home or your friends, check out this page.
+					<br />Get your piece of the 2018 FIFA World Cup Russia!
+				</p>
+			</div>
+		</td>
+		<td colspan="2">
+			<a href="#basketDiv">
+			<img src="../Img/shop_cart_small.png" id="ShopCartImg" style="width: 30px; height: 30px" onClick="location.href='../Pages/PageCheckOut.htm';" />
+			</a>
+			<div id="showTotalTop">Total:</div>
+		</td>
+	</tr>
+</table>
+<form action="../Pages/PageCheckOut.htm">
+<table id="goodsTbl">
+	<tr>
+		<th class="idRow">ID</th>
+		<th>Description</th>
+		<th>Price</th>
+		<th>Quantity to buy</th>
+	</tr>
+	<tr>
+		<td class="idRow">1001</td>
+		<td class="alignCtbl">
+		<div class="zoom" >
+			<img src="../Img/item-1001.jpg" alt="t-Shirt-Red1" id="t-Shirt-Red-XL" class="goodsPreview" />
+		</div>
+		<div class="goodsDesc"><p>2018 FIFA World Cup Russia Trophy Event <br />Emblem T-Shirt (Red) (Size XL)</p>
+		<p>Soft premium tee with no side seams for added comfort.</p>
+		</div>
+		</td>
+		<td>30.00</td>
+		<td class="alignCtbl">
+			<input type="number" class="goodsQty" id="goodsQty_1001">
+			<input type="button" name="add" value="add" onclick="USR_addToBasket('1001','T-Shirt_Red-XL','30.00')">
+		</td>
+	</tr>
+	<tr>
+		<td class="idRow">1002</td>
+		<td class="alignCtbl">
+		<div class="zoom">
+			<img src="../Img/item-1002.jpg" alt="t-Shirt-Red1" id="t-Shirt-Red-L" class="goodsPreview" />
+		</div>	
+		<div class="goodsDesc"><p>2018 FIFA World Cup Russia Trophy Event <br />Emblem T-Shirt (Red)(Size L)</p>
+		<p>Soft premium tee with no side seams for added comfort.</p>
+		</div>
+		</td>
+		<td>30.00</td>
+		<td class="alignCtbl">
+			<input type="number" class="goodsQty" id="goodsQty_1002">
+			<input type="button" name="add" value="add" onclick="USR_addToBasket('1002','T-Shirt_Red-L','30.00')">
+		</td>
+	</tr>
+	<tr>
+		<td class="idRow">1011</td>
+		<td class="alignCtbl">
+		<div class="zoom">
+			<img src="../Img/item-1011.jpg" alt="t-Shirt-Gold-M" id="t-Shirt-Gold-M" class="goodsPreview" />
+		</div>
+		<div class="goodsDesc"><p>2018 FIFA World Cup Russia Trophy and<br /> Flags T-Shirt (Gold) (Size M)</p>
+		<p>Soft premium tee with no side seams for added comfort.</p></div>
+		</td>
+		<td>35.00</td>
+		<td class="alignCtbl">
+			<input type="number" class="goodsQty" id="goodsQty_1011">
+			<input type="button" name="add" value="add" onclick="USR_addToBasket('1011','T-Shirt_Gold-M','35.00')">
+		</td>
+	</tr>
+	<tr>
+		<td class="idRow">1012</td>
+		<td class="alignCtbl">
+		<div class="zoom">
+			<img src="../Img/item-1012.jpg" alt="t-Shirt-Gold-S" id="t-Shirt-Gold-S" class="goodsPreview" />
+		</div>
+		<div class="goodsDesc"><p>2018 FIFA World Cup Russia Trophy and<br /> Flags T-Shirt (Gold) (Size S)</p>
+		<p>Soft premium tee with no side seams for added comfort.</p></div>
+		</td>
+		<td>35.00</td>
+		<td class="alignCtbl">
+			<input type="number" class="goodsQty" id="goodsQty_1012">
+			<input type="button" name="add" value="add" onclick="USR_addToBasket('1012','T-Shirt_Gold-S','35.00')">
+		</td>
+	</tr>
+	<tr>
+		<td class="idRow">1051</td>
+		<td class="alignCtbl">
+			<div class="zoom">
+				<img src="../Img/item-1051.jpg" alt="FIFA_WorldCup_Basket" id="WorldCup_Basket" class="goodsPreview" />
+			</div>
+			<div class="goodsDesc">2018 FIFA World Cup<br />(official FIFA poster)</div>
+		</td>
+		<td>25.00</td>
+		<td class="alignCtbl">
+			<input type="number" class="goodsQty" id="goodsQty_1051">
+			<input type="button" name="add" value="add" onclick="USR_addToBasket('1051','WorldCup_Poster','25.00')">
+		</td>
+	</tr>
+	<tr>
+		<td class="idRow">1052</td>
+		<td class="alignCtbl">
+			<div class="zoom">
+				<img src="../Img/item-1052.jpg" alt="Cities_Matches" id="Cities_Matches" class="goodsPreview" />
+			</div>
+			<div class="goodsDesc">2018 FIFA World Cup Games and Cities<br />(Dates, cities and games)</div>
+		</td>
+		<td>20.00</td>
+		<td class="alignCtbl">
+			<input type="number" class="goodsQty" id="goodsQty_1052">
+			<input type="button" name="add" value="add" onclick="USR_addToBasket('1052','Cities_Matches_Poster','20.00')">
+		</td>
+	</tr>
+	<tr>
+		<td class="idRow">1081</td>
+		<td class="alignCtbl">
+		<div class="zoom">
+			<img src="../Img/item-1081.jpg" alt="SoccerBall_Size5" id="Soccer_Ball_Size5" class="goodsPreview" />
+		</div>
+		<div class="goodsDesc"><p>Soccer ball: Standard Size 5 <br />(Official Match Soccer Ball)</p>
+			<p>COVER: Six panels of premium PU that has been bonded for reduced water absorption and perfect roundness. The 6 panel design allows for a more consistent flight and touch.</p>
+		</div>
+		</td>
+		<td>90.00</td>
+		<td class="alignCtbl">
+			<input type="number" class="goodsQty" id="goodsQty_1081">
+			<input type="button" name="add" value="add" onclick="USR_addToBasket('1081','SoccerBall_Size5','120.00')">
+		</td>
+	</tr>
+	<tr>
+		<td class="idRow">1082</td>
+		<td class="alignCtbl">
+		<div class="zoom">
+			<img src="../Img/item-1082.jpg" alt="AllFlags_SoccerBall_S5" id="AllFlags_SoccerBall_S5" class="goodsPreview" />
+		</div>
+		<div class="goodsDesc"><p>Soccer ball: All Flags FIFA Size 5 <br />(Internation - All Flags Soccer Ball)</p>
+			<p>COVER: Six panels of premium PU that has been bonded for reduced water absorption and perfect roundness. The 6 panel design allows for a more consistent flight and touch.</p>
+		</div>
+		</td>
+		<td>80.00</td>
+		<td class="alignCtbl">
+			<input type="number" class="goodsQty" id="goodsQty_1082">
+			<input type="button" name="add" value="add" onclick="USR_addToBasket('1082','AllFlags_SoccerBall_S5','110.00')">
+		</td>
+	</tr>
+	<tr>
+		<td class="idRow">1091</td>
+		<td class="alignCtbl">
+		<div class="zoom">
+			<img src="../Img/item-1091.jpg" alt="FIFA2018-Magnets" id="Various_Magnets" class="goodsPreview" />
+		</div>
+		<div class="goodsDesc"><p>Magnets (random theme FIFA 2018)</p></div>
+		</td>
+		<td>15.00</td>
+		<td class="alignCtbl">
+			<input type="number" class="goodsQty" id="goodsQty_1091">
+			<input type="button" name="add" value="add" onclick="USR_addToBasket('1091','Various_Magnets','15.00')">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" style="text-align: center;">
+        <input type="submit" value="Proceed to Checkout" style="padding: 0px; margin: 4px;">
+        &nbsp;&nbsp;&nbsp;
+        <input type="reset" style="padding: 0px; margin: 4px;" onclick="USR_funcReset();">
+      </td>
+	</tr>
+</table>
+</form>
+	<div id="basketDiv">
+		<table id="basketTbl">
+			<tr>
+				<td>ID:</td><td>Qty:</td><td>Price:</td>
+			</tr>
+		</table>
+	</div>
+	<div id="totalSumDiv"></div>
+
+<br /><br />
+<div id="footerDiv">
+	<h4> webmaster: Alexey Zapromyotov </h4>
+</div>
+</body>
+<script type="text/javascript" src="../JS/topmenu.js"></script>
+</html>
+
+
+<!-- This is a part of <style> for image
+
+	-->
